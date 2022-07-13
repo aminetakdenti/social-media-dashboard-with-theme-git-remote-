@@ -1,0 +1,274 @@
+/* !Start Globale Variables */
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youTube: hsl(348, 97%, 39%);
+}
+/* !End Globale Variables */
+
+/* !Start Globale Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: 0.1s;
+}
+body {
+  font-family: "Inter", sans-serif;
+  padding-bottom: 40px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* !End Globale Rules */
+
+/* !Start Header */
+.dash-board .top {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  border-radius: 0px 0px 30px 30px;
+}
+.dash-board .header {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .dash-board .header {
+    text-align: start;
+    flex-direction: column;
+  }
+  .dash-board .header .info {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .dash-board .header .info::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: -20px;
+    background-color: hsl(228, 34%, 66%);
+  }
+}
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .dash-board .header .theme {
+    margin: 10px auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.theme p {
+  margin-right: 15px;
+  font-weight: 700;
+}
+.theme [title="toggle"] {
+  width: 40px;
+  height: 20px;
+  padding: 2.5px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.theme [title="toggle"] button {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* !End Header */
+
+/* !Start main */
+.main {
+  margin: 40px auto;
+  width: 100%;
+}
+.main .statistic {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+.main .statistic .card {
+  padding: 20px;
+  text-align: center;
+  width: fit-content;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.main .statistic .card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--facebook);
+  z-index: 3;
+}
+.main .statistic .card:nth-child(2):before {
+  background-color: var(--twitter);
+}
+.main .statistic .card:nth-child(3):before {
+  background: var(--instagram);
+}
+.main .statistic .card:nth-child(4):before {
+  background: var(--youTube);
+}
+.main .statistic .card .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto;
+}
+.main .statistic .card .title img {
+  width: 20px;
+}
+.main .statistic .card .title p {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.main .statistic .card .info {
+  margin: 20px;
+}
+.main .statistic .card .info h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.main .statistic .card .info p {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin: 15px;
+  text-transform: uppercase;
+}
+.main .statistic .card .info span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lime-green);
+  margin-top: 30px;
+  position: relative;
+}
+.main .statistic .card:nth-child(4) .info span {
+  color: var(--bright-red);
+}
+.main .statistic .card .info span::before {
+  content: url(../images/icon-up.svg);
+  position: absolute;
+  margin-left: -15px;
+  top: -3px;
+}
+.main .statistic .card:nth-child(4) .info span::before {
+  content: url(../images/icon-down.svg);
+  top: -2px;
+}
+
+/* ?Start Overview */
+.today-overview {
+  margin-top: 40px;
+}
+.today-overview h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+.today-overview .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+.today-overview .content .card {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 7px;
+}
+.today-overview .content .card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.today-overview .content .card .info {
+  margin-top: 25px;
+}
+.today-overview .content .card div h1 {
+  margin: 0;
+  font-size: 35px;
+}
+.today-overview .content .card div p {
+  margin: 0;
+  font-weight: 700;
+}
+.today-overview .content .card div span {
+  font-weight: 700;
+  color: var(--lime-green);
+  position: relative;
+}
+.today-overview .content .card:nth-child(2) div span {
+  color: var(--bright-red);
+}
+.today-overview .content .card div span::before {
+  content: url(../images/icon-up.svg);
+  position: absolute;
+  margin-left: -15px;
+  top: -3px;
+}
+.today-overview .content .card:nth-child(2) div span::before {
+  content: url(../images/icon-down.svg);
+  position: absolute;
+  margin-left: -15px;
+  top: -3px;
+}
+.today-overview .content .card:nth-child(7) div span,
+.today-overview .content .card:nth-child(8) div span {
+  color: var(--bright-red);
+}
+.today-overview .content .card:nth-child(7) div span::before,
+.today-overview .content .card:nth-child(8) div span::before {
+  content: url(../images/icon-down.svg);
+  position: absolute;
+  margin-left: -15px;
+  top: -3px;
+}
+/* ?End Overview */
+/* !End main */

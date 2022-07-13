@@ -1,0 +1,51 @@
+/* !Start Dark Theme */
+.dark-body-bg {
+  background-color: hsl(230, 17%, 14%);
+  color: white;
+}
+.dark-body-top-bg {
+  background-color: hsl(232, 19%, 15%);
+}
+.dark-card-bg {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark-card-bg:hover {
+  cursor: pointer;
+  background-color: hsl(228, 28%, 30%);
+}
+.dark-special-text-color {
+  color: hsl(228, 34%, 66%);
+}
+.dark-btn-bg {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark-toggle-bg {
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+/* !End Dark Theme */
+
+/* !Start White Theme */
+.white-body-bg {
+  background-color: white;
+  color: hsl(230, 17%, 14%);
+}
+.white-body-top-bg {
+  background-color: hsl(225, 100%, 98%);
+}
+.white-card-bg {
+  background-color: hsl(227, 47%, 96%);
+}
+.white-card-bg:hover {
+  cursor: pointer;
+  background-color: hsl(227, 47%, 90%);
+}
+.white-special-text-color {
+  color: hsl(228, 34%, 66%);
+}
+.white-btn-bg {
+  background-color: white;
+}
+.white-toggle-bg {
+  background: hsl(230, 22%, 74%);
+}
+/* !End White Theme */
